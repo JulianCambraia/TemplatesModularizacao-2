@@ -1,0 +1,23 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head></h:head>
+<h:body>
+	<ui:composition>
+		<h:panelGrid columns="2" cellspacing="5" rendered="#{not empty produtoBean.produtoSelecionado}">
+			<h:graphicImage value="#{paramProdutos.caminhoDaImagem}" width="100"/>
+			<h:panelGroup>
+				<h2><h:outputText value="#{produtoBean.produtoSelecionado.nome}" /></h2>
+				Preço
+				<h:outputFormat value="{0, number, R$ .00}" style="color:red;">
+					<f:param value="#{produtoBean.produtoSelecionado.preco}"/> 
+				</h:outputFormat>
+			</h:panelGroup>
+		</h:panelGrid>
+		<h2><h:outputText value="#{produtoBean.produtoSelecionado.detalhes}"/></h2>
+	</ui:composition>
+</h:body>
+</html>
