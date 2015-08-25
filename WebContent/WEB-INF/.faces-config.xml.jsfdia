@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PROCESS model-entity="JSFProcess">
+ <PROCESS-ITEM NAME="rules:#listagem-de-instrutores.xhtml"
+  PATH="/listagem-de-instrutores.xhtml" SHAPE="32,17,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#listagem-de-instrutores.xhtml:0" NAME="item"
+   PATH="/listagem-de-instrutores.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="produtos::#listagem-de-produtos.xhtml"
+    NAME="output" PATH="/listagem-de-produtos.xhtml"
+    TARGET="rules:#listagem-de-produtos.xhtml" TITLE="produtos" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#listagem-de-produtos.xhtml"
+  PATH="/listagem-de-produtos.xhtml" SHAPE="240,33,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#listagem-de-produtos.xhtml:0" NAME="item"
+   PATH="/listagem-de-produtos.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="instrutores::#listagem-de-instrutores.xhtml"
+    NAME="output" PATH="/listagem-de-instrutores.xhtml"
+    TARGET="rules:#listagem-de-instrutores.xhtml" TITLE="instrutores" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+</PROCESS>

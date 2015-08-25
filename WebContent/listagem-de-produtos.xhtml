@@ -12,7 +12,7 @@
 				styleClass="logo" />
 		</ui:define>
 		<ui:define name="container">
-			<form id="produtos">
+			<h:form id="produtos">
 				<fieldset>
 					<legend>Produtos</legend>
 					<h:panelGrid columns="2">
@@ -30,7 +30,8 @@
 						<ui:param name="paramProdutos" value="#{produtoBean.produtoSelecionado}" />
 					</ui:include>
 				</fieldset>
-			</form>
+				<h:commandLink action="instrutores" value="Listar Instrutores" />
+			</h:form>
 		</ui:define>
 	</ui:composition>
 </h:body>
